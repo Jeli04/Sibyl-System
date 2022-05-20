@@ -17,6 +17,10 @@ def sad_get():
 def about_sibyl_get():
     return render_template("sibylinfo.html")
 
+@app.get("/donate")
+def donate_get():
+    return render_template("donate.html")
+
 @app.get("/forum")
 def forum_get():
     return render_template("forum.html")
