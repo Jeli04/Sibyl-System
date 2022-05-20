@@ -8,7 +8,10 @@
 .header{
     min-height: 60vh;
     width: 100%;
-    background-image: linear-gradient(rgba(16, 9, 158, 0.7),rgba(0, 0, 0, 0.7)),url(sad.png);
+    background-image: url("images/donate_image.png");
+    /*
+    background-image: linear-gradient(rgb(255, 175, 204, 0.7),rgba(255, 255, 255, 0.7)),url("images/donate_image.png");
+    */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -96,12 +99,29 @@ h1{
 }
 
 .partTwo{
-    
-    /*change color later */
-    
-    background-image: linear-gradient(rgb(21, 208, 246), rgb(10, 69, 98));
-    width: 100%;
-    min-height: 600vh;
-    
+    background-image: url("images/support_background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 115%;
+}
 
+.container{
+    position: relative;
+}
+
+.button1style{
+    border: none;
+    background: transparent;
+    position: absolute;
+    z-index: 2;
+    left: 300px;
+    bottom: 75px;
+}
+
+.button2style{
+    border: none;
+    background: transparent;
+    position: absolute;
+    z-index: 2;
+    right: 100px;
+    bottom: 75px;
 }
