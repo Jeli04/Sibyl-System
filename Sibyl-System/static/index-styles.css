@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+   }
+   
+   
+   .header{
+    /*min-height: 90vh;*/
+    width: 100%;
+    background-image: linear-gradient(rgba(44, 104, 161, 0.295),rgba(44, 105, 161, 0.9)),url("/static/images/aiwallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+   }
+   
+   body{
+    font-family: 'Oswald', sans-serif;
+   }
+   
+   #navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /*background: rgba(180, 179, 179, 0.3);*/
+   }
+   
+   .navbar{
+    padding: 0 !important;
+    
+   }
+   
+   .navbar-brand img{
+    height: 90px;
+    
+   }
+   
+   .navbar-nav li{
+    padding: 0 10px;
+    
+   
+   }
+   
+   .navbar-nav li a{
+    color: #fff !important;
+   }
+   
+   
+   
+   .fa-bars{
+    color: #fff;
+    font-size: 30px !important;
+   }
+   
+   .navbar-toggler{
+    outline: none !important;
+   }
+   
+   .text-box{
+    text-align: center;
+    color: #fff;
+   }
+   
+   .navbar ul li::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 100ms ease-in;
+   
+   }
+   .navbar ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 200ms ease-out;
+   
+   }
+   
+   .button-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 25vh;
+    font-size: 13px;
+    margin-top: 150px;
+    text-align: center;
+   }
+   
+   .buttonOne{
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: ease-out 0.3s;
+    outline: none;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+    outline: 3px solid #CDB4DB;
+    display: inline-block;
+    text-decoration: none;
+  }
+   
+   
+   .buttonOne:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+   }
+   
+   .buttonOne:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #CDB4DB ;
+   }
+   
+   .buttonOne:hover::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+   }
+   
+   .buttonTwo{
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: ease-out 0.3s;
+    outline: none;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+    outline: 3px solid #CDB4DB;
+    display: inline-block;
+    text-decoration: none;
+   }
+   
+   
+   .buttonTwo:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+   }
+   
+   .buttonTwo:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #CDB4DB ;
+   }
+   
+   /* I can change button color later if needed */
+   
+   .buttonTwo:hover::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+   }
+   
+   
+   /* CHATBOT CSS */
+   .chatbot{
+     
+     position: relative;
+   }
+
+   .chatbox_frame {
+    z-index: 2;
+    position: relative;
+    margin: auto;
+    top: 50px;
+    bottom: 75px;
+    height: 590px;
+    width: 722px;
+    background-image: url("/static/images/chatbox_frame.png");
+   }
+   
+   .text_box {
+    position: absolute;
+    bottom: 30px;
+    right: 200px;
+    height: 53px;
+    width: 455px;
+    border: none;
+    background: none;
+    background-image: url("/static/images/text_box.png");
+   
+   }
+   
+   .send_button {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    border: none;
+    background: none;
+   }
+   
+   
+   
+   /* MESSAGES */
+   .chatbox_messages {
+    top: 112px;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 722px;
+    height: 366px;
+    background-image: url("/static/images/chatbox_messages.png");
+    padding: 2%;
+   }
+
+   
+   .message_item {
+    background-repeat: no-repeat;
+    background: #A2D2FF;
+    max-width: 60%;
+    width: fit-content;
+    padding: 10px;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   .messages_item--operator {
+    margin-left: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+   }
+
+   .messages_item--visitor {
+    margin-right: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+   }
+
+   input {
+       padding: 5px;
+   }
+
+
+   .typewriter h1{
+    color: white;
+    display: inline-block;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #FFAFCC; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #FFAFCC; }
+  }
+
+
+  .rgb::after{
+    content:"";
+    width: 730px;
+    height: 598px;
+    margin-top: 50px;
+    margin-left: 32.25%;
+    position: absolute;
+    background: linear-gradient(45deg,
+    #2474be 0%,
+    #639dd3 10%,
+    #8cbff0 20%,
+    #5dbaf0 30%,
+    #22AFFF 40%,
+    #FFC8DD 50%,
+    #ecadc5 60%,
+    #FFAFCC 70%,
+    #d7c3e2 80%,
+    #CDB4DB 90%,
+    #c186e4 100%
+
+
+
+    /*
+    #ff0000 0%, 
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100% 
+    */ )
+    repeat 0% 0% / 300% 100%;
+    inset: -3px;
+    border-radius: 25px;
+    filter: blur(8px);
+    z-index: 1;
+    animation: rgb 6s linear infinite;
+  }
+
+  @keyframes rgb {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }

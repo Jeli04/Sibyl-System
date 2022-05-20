@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <!-- may need the forwardslash in line 6 at the end of the tag -->
+        <meta name="viewport" content="with=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>Project Sibyl</title>
+        <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='images\Sibyl_System.jpg')}}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index-styles.css')}}">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <section class="header">
+            <section id="navbar">
+            <!--could need mynav in line 21 after navbar-light but seems to work fine-->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <!-- check img src syntax may need full file path-->
+                      <a class="navbar-brand" href="{{ url_for('index_get')}}"><img src="{{ url_for('static', filename='images/Sibyl_System.jpg')}}"></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{ url_for('index_get')}}">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('sad_get')}}">About S.A.D.</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about_sibyl_get')}}">About Sibyl</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('forum_get')}}">Forum</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                <br/>
+    
+
+    
+            </section>
+
+                <div style="width: fit-content; margin: auto;">
+                  <div class = "typewriter">
+                      <h1>Say Hello To Sibyl</h1>
+                  </div> 
+                </div>
+
+                <!--insert chatbot here-->
+                <div class = "chatbot">
+                  <div style="top: 100px">
+                    <div class="rgb"></div>
+                  </div>
+                  <div class = "chatbox_frame">
+                    <div class = "chatbox_messages">
+                      <div></div>
+                    </div>
+                    <input class = "text_box" type="text" placeholder="Write a Message">
+                    <button class="send_button"><img src = "{{ url_for('static', filename='images/send_button.png')}}" alt = "button_img"></button>
+                  </div>
+
+                </div>
+
+                <!-- make sure to add html website links and stuff!-->
+
+                <div class="button-group">
+                  <a class="buttonOne" href="{{ url_for('about_sibyl_get')}}">Read about Sibyl!</a>
+                  <a class="buttonTwo" href="{{ url_for('forum_get')}}">Share on the Forums!</a>
+                </div>
+
+
+        </section>
+        
+        <!--
+        <script>
+          $SCRIPT_ROOT = {{ request.script_root|tojson}};
+        </script>
+        
+        <script type="text/javascript" src="{{ url_for('static', filename='chatbot.js') }}"></script>
+        -->
+        <script src="/static/chatbot.js"></script>
+
+      </body>
+
+</html>
+

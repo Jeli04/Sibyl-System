@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.header{
+    min-height: 75vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(100, 5, 87, 0.7)),url("images/sad.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(175, 175, 175, 0.158);
+}
+
+.navbar{
+    padding: 0 !important;
+    
+}
+
+.navbar-brand img{
+    height: 90px;
+    
+}
+
+.navbar-nav li{
+    padding: 0 10px;
+    
+
+}
+
+.navbar-nav li a{
+    color: #fff !important;
+}
+
+
+
+.fa-bars{
+    color: #fff;
+    font-size: 30px !important;
+}
+
+.navbar-toggler{
+    outline: none !important;
+}
+
+.text-box{
+    text-align: center;
+    color: #fff;
+}
+
+.navbar ul li::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 100ms ease-in;
+
+}
+.navbar ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 200ms ease-out;
+    
+}
+
+h1{
+    text-align: center;
+
+}
+
+.partTwo{
+    background-image: url("images/sad_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+.button1style{
+    border: none;
+    background: transparent;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A2D2FF;
+    width: 100%;
+    margin: auto;
+    height: 349px;
+    margin-bottom: 100px;
+    margin-top: 25px;
+}
+
+.button2style{
+    border: none;
+    float: left;
+    margin: 50px;
+}

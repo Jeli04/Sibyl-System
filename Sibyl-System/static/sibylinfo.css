@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.header{
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(60, 7, 53, 0.7)),url(AI_0.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+/*i dont know if hashtag on body is correct usage */
+#body{
+    font-family: 'Oswald', sans-serif;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: rgba(180, 179, 179, .2); 
+    width: 100%;
+}
+
+.navbar{
+    padding: 0 !important;
+    
+}
+
+.navbar-brand img{
+    height: 90px;
+    
+}
+
+.navbar-nav li{
+    padding: 0 10px;
+    
+
+}
+
+.navbar-nav li a{
+    color: #fff !important;
+}
+
+
+
+.fa-bars{
+    color: #fff;
+    font-size: 30px !important;
+}
+
+.navbar-toggler{
+    outline: none !important;
+}
+
+.text-box{
+    text-align: center;
+    color: #fff;
+}
+
+.navbar ul li::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 100ms ease-in;
+
+}
+.navbar ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 200ms ease-out;
+}
+
+
+.sibylInfo{
+    background-image: linear-gradient(black,black);
+    /*change color later */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 150vh;
+}
+
+.body-text{
+    position: center;
+    text-align: center;
+    
+}
+
+.aboutheadingOne{
+   text-align: center;
+   font-size: 50px;
+}
+
+.aboutBot{
+    text-align: center;
+    position: center;
+    margin-left: 500px;
+    margin-right: 500px;
+
+}

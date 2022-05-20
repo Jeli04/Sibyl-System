@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- may need the forwardslash in line 6 at the end of the tag -->
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Forums</title>
+        <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='images/Sibyl_System.jpg')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='forum.css')}}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/c6f403a88a.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="header">
+            <section id="navbar">
+              
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <!-- check img src syntax may need full file path-->
+                        <a class="navbar-brand" href="{{ url_for('index_get')}}"><img src="{{ url_for('static', filename='images/Sibyl_System.jpg')}}"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="{{ url_for('index_get')}}">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('sad_get')}}">About S.A.D.</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about_sibyl_get')}}">About Sibyl</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('forum_get')}}">Forum</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                <br/>
+    
+            </section>
+
+                <div class="text-box">
+                    <br/><br/><br/><br/><br/><br/><br/>
+                    <h1 style="font-size: 70px">Forum</h1>
+                </div>
+
+                
+
+                
+
+        </div>
+
+        <div class= "forum">
+            <section class="forumstuff">
+
+                <p><iframe height="787px" src="https://sibyl.forumotion.com" width="100%"></iframe></p>
+
+            </section>
+
+        </div>
+
+    </body>
+</html>
