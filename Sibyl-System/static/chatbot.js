@@ -1,6 +1,7 @@
 class Chatbox{
     constructor() {
         this.args = {
+            // Gets the parts from the html files
             chatBox: document.querySelector('.chatbox_frame'),
             sendMessage: document.querySelector('.send_button')
         }
@@ -8,12 +9,15 @@ class Chatbox{
         this.messages = [];
     }
 
+    // Displays the text
     display() {
         const {chatBox, sendMessage} = this.args;
         var console = window.console;
 
+        // On send button
         sendMessage.addEventListener('click', () => this.onSendButton(chatBox)) // Checks if the send button is clicked
 
+        // Listens to user input
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
             if (key === "Enter"){
@@ -29,11 +33,13 @@ class Chatbox{
         if(text1 === "") {
             return;
         }
-
+        
+        // Creates a dictionary
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        // Not giving a string?
+        // Gets the predict function by using the Flask interface 
+        // Converts the string in a json file for ML purpose
         fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
             body: JSON.stringify({message: text1}),
@@ -55,6 +61,7 @@ class Chatbox{
         });
     }
 
+    // Adds the html contents with the choosen answer
     updateChatText(chatbox){
         var html = '';
         this.messages.slice().reverse().forEach(function(item, index) {
@@ -66,6 +73,7 @@ class Chatbox{
             }
         });
         
+        // Gets the html file
         const chatmessage = chatbox.querySelector('.chatbox_messages');
         chatmessage.innerHTML = html;
     }
