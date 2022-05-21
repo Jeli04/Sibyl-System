@@ -26,7 +26,7 @@ def forum_get():
     return render_template("forum.html")
 
 
-
+# Gets the prediction from the model
 @app.post("/predict")
 def predict():
     text = request.get_json().get("message")

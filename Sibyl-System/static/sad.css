@@ -95,6 +95,7 @@ h1{
 .container{
     display: flex;
     justify-content: center;
+    margin: 2% auto 10% auto;
     margin-top: 2%;
     margin-bottom: 10%;
 }

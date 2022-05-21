@@ -6,9 +6,9 @@
 
 
 .header{
-    min-height: 60vh;
+    min-height: 75vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(60, 7, 53, 0.7)),url(AI_0.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(60, 7, 53, 0.7)),url("images/sibyl_creation_header.png");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -83,12 +83,14 @@
 
 
 .sibylInfo{
-    background-image: linear-gradient(black,black);
+    
     /*change color later */
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    min-height: 150vh;
+    /*height: 600vh;*/
+    height: 100%;
+    background-image: url("images/sibylinfo_background.png");    
 }
 
 .body-text{

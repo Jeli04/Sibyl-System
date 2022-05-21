@@ -215,7 +215,7 @@
    
    /* MESSAGES */
    .chatbox_messages {
-    top: 112px;
+    top: 16px;
     display: flex;
     overflow-y: scroll;
     flex-direction: column-reverse;
@@ -286,8 +286,7 @@
     content:"";
     width: 730px;
     height: 598px;
-    margin-top: 50px;
-    margin-left: 32.25%;
+    margin: 50px auto auto auto;
     position: absolute;
     background: linear-gradient(45deg,
     #2474be 0%,

@@ -65,6 +65,10 @@
                     <div class="rgb"></div>
                   </div>
                   <div class = "chatbox_frame">
+                    <div class = "chatbot_header">
+                      <img src="{{ url_for('static', filename='images/Sibyl_System.jpg')}}" style="height: 10%; width:10%; margin: 20px 0px 0px 30px;">
+                      <h1 style="color: rgb(255, 255, 255); float: right; margin: 35px 455px 0px 20px; font-size: xx-large;">Sibyl Online</h1>
+                    </div>  
                     <div class = "chatbox_messages">
                       <div></div>
                     </div>
@@ -77,10 +81,9 @@
                 <!-- make sure to add html website links and stuff!-->
 
                 <div class="button-group">
-                  <a class="buttonOne" href="{{ url_for('about_sibyl_get')}}">Read about Sibyl!</a>
-                  <a class="buttonTwo" href="{{ url_for('forum_get')}}">Share on the Forums!</a>
+                  <button class="buttonOne" onclick="takeToPage()">Read about Sibyl</button>
+                  <button class="buttonTwo" onclick="takeToPageTwo()">Share on the Forums</button>
                 </div>
-
 
         </section>
         
@@ -91,6 +94,20 @@
         
         <script type="text/javascript" src="{{ url_for('static', filename='chatbot.js') }}"></script>
         -->
+        <script>
+          
+          function takeToPage(){
+            console.log("WORKS")
+            window.location ="{{ url_for('about_sibyl_get')}}"
+          }
+
+          function takeToPageTwo(){
+            console.log("WORKS")
+            window.location = "{{ url_for('forum_get')}}"
+          }
+
+        </script>
+
         <script src="/static/chatbot.js"></script>
 
       </body>

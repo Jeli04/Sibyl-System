@@ -8,7 +8,7 @@ import numpy as np
 import urllib
 
 from keras.models import load_model
-model = load_model('Chatbot\chatbot_model_test3.h5')
+model = load_model('Chatbot\chatbot_model_test4.h5')
 import json
 import random
 with urllib.request.urlopen("https://raw.githubusercontent.com/Jeli04/ChatBot/main/sibyl_test_data.json") as url:
@@ -46,7 +46,7 @@ def bow(sentence, words, show_details = True):
 
 
 
-
+# Predicts the intent
 def predict_class(sentence, model):
   p = bow(sentence, words, show_details=False)
   result = model.predict(np.array([p]))[0]  # Uses the ML model to predict the intent classification results 
@@ -58,6 +58,7 @@ def predict_class(sentence, model):
   
   #print("test: ", results[0][1])
 
+  # Sorts the list in reverse to find the highest probability
   results.sort(key=lambda x: x[1], reverse=True)
   return_list = []
   for r in results:
@@ -71,8 +72,9 @@ def predict_class(sentence, model):
 
 def getResponse(ints, intents_json):
     print(ints[0])
-    intent = ints[0]["intent"]
+    intent = ints[0]["intent"]  #Gets the first intent or highest probability
     list_of_intents = intents_json['data']
+    # Loops through all intents and finds the correct one than randomly chooses an answer choice
     for i in list_of_intents:
         if(i['intent']== intent):
           result = random.choice(i['answerText'])
@@ -81,7 +83,7 @@ def getResponse(ints, intents_json):
 
 
 
-
+# Gets the response
 def chatbot_response(msg):
   #print(msg)
   ints = predict_class(msg, model)
@@ -91,4 +93,5 @@ def chatbot_response(msg):
     res = getResponse(ints, training)
     return res
 
+#test
 print(chatbot_response("I am depressed"))

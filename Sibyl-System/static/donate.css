@@ -113,7 +113,7 @@ h1{
     background: transparent;
     position: absolute;
     z-index: 2;
-    left: 300px;
+    left: 825px;
     bottom: 75px;
 }
 
@@ -122,6 +122,6 @@ h1{
     background: transparent;
     position: absolute;
     z-index: 2;
-    right: 100px;
+    right: 825px;
     bottom: 75px;
 }
